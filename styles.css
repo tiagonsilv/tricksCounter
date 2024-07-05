@@ -1,3 +1,8 @@
+/* Prevent accidental zooming when double-tapping */
+html {
+  touch-action: manipulation;
+}
+
 /* Global styles */
 
 * {
@@ -9,23 +14,23 @@
   
   body {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 2rem;
+    overflow-y: hidden;
   }
   
 
 #container {
-  padding: 20px;
+  padding: 2rem;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  }
+  gap: 3rem;
+}
   
 /* Title styles */
   
