@@ -10,7 +10,7 @@ function updateResultText() {
   resultText.innerText = `
     Attempts: ${attempts}
     Makes: ${makes}
-    WinRate: ${(makes / attempts * 100).toFixed(2)}%
+    Sucess Rate: ${(makes / attempts * 100).toFixed(2)}%
   `;
 }
 
@@ -20,7 +20,6 @@ document.getElementById('doneButton').addEventListener('click', function() {
   const container = document.getElementById('container');
   container.style.display = 'none';
   resultScreen.style.display = 'block';
-  console.log('You clicked.');
 });
 
 // Event listener for copy button
@@ -29,14 +28,38 @@ document.getElementById('startOverButton').addEventListener('click', function() 
   container.style.display = 'flex';
   attemptsSpan.innerHTML = '0';
   makesSpan.innerHTML = '0';
-  });
+});
 
 
 // Function to update the count
 function updateCount(elementId, delta) {
   const element = document.getElementById(elementId);
   const currentValue = parseInt(element.textContent);
-  element.textContent = currentValue + delta;
+  const newValue = currentValue + delta;
+  if (newValue < 0) return;
+  element.textContent = newValue;
+  const doneButton = document.getElementById('doneButton');
+  const currentAttempts = parseInt(attemptsSpan.textContent);
+  const currentMakes = parseInt(makesSpan.textContent);
+
+  // Disable done button if makes > attempts
+  if (elementId === 'attempts' && currentMakes > newValue) {
+    doneButton.disabled = true;
+    return;
+  }
+  if (elementId === 'makes' && currentAttempts < newValue) {
+    doneButton.disabled = true;
+    return;
+  }
+  // Disable done button if makes = attempts = 0
+  if (currentAttempts === 0 && currentMakes === 0) {
+    doneButton.disabled = true;
+    return;
+  }
+
+  // All goes according to plan
+  doneButton.disabled = false;
+  
 }
 
 // Event listeners for increase/decrease buttons
