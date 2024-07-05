@@ -1,0 +1,123 @@
+/* Global styles */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+  }
+  
+
+#container {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Add this to center vertically */
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Title styles */
+  
+  h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  
+  /* Counter styles */
+  
+  .counter {
+    margin-bottom: 20px;
+  }
+  
+  .counter p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .counter button {
+    font-size: 46px;
+    width: 76px;
+    height: 76px;
+    border: none;
+    border-radius: 30%;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 0px;
+  }
+  
+  .counter button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .counter span {
+    font-size: 46px;
+    margin: 0 20px;
+    max-width: 20px;
+  }
+  
+  /* Done button styles */
+  
+  #doneButton {
+    font-size: 30px;
+    width: 70%;
+    height: 76px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #doneButton:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Result screen styles */
+  
+  .result-screen {
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #resultText {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  #startOverButton {
+    font-size: 30px;
+    width: 70%;
+    height: 76px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  #startOverButton:hover {
+    background-color: #3e8e41;
+  }

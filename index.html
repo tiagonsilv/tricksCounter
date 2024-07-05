@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trick Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Trick Counter</h1>
+        <div class="counter">
+            <p>Attempts:</p>
+            <button id="attemptsDecrease">-</button>
+            <span id="attempts">0</span>
+            <button id="attemptsIncrease">+</button>
+        </div>
+        <div class="counter">
+            <p>Makes:</p>
+            <button id="makesDecrease">-</button>
+            <span id="makes">0</span>
+            <button id="makesIncrease">+</button>
+        </div>
+        <button id="doneButton">Done</button>
+    </div>
+    <div id="resultScreen" class="result-screen" style="display: none;">
+        <p id="resultText"></p>
+        <button id="startOverButton">Start Over</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
